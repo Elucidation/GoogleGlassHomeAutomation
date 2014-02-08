@@ -3,6 +3,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="15" />
@@ -11,13 +13,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
-        <activity
-            android:name="com.elucidation.hellohome.Card"
-            android:label="@string/app_name"
-            android:enabled="true">            
-        </activity>
         
-        <service
+        <activity
             android:name="com.elucidation.hellohome.HelloHome"
             android:enabled="true"
             android:exported="true"
@@ -31,7 +28,7 @@
             <meta-data
                 android:name="com.google.android.glass.VoiceTrigger"
                 android:resource="@xml/voice_trigger_start" />
-        </service>
+        </activity>
     </application>
 
 </manifest>
