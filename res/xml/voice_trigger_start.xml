@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- The string used to start the application from the "Okay, Glass" menu -->
-<trigger keyword="@string/start_hellohome" />
+<trigger keyword="@string/start_hellohome" >
+    <input prompt="@string/start_prompt" />
+</trigger>
