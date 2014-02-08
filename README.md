@@ -5,7 +5,7 @@ Say `Hello Home` via google glass and you can communicate with an arduino webser
 
 ![Imgur](http://i.imgur.com/bSrnav2.jpg)
 
-Don't expect to be able to download and run this code and expect it to work unless you have the same setup sadly, instead the code is there to learn the tools for making your own.
+Don't expect to be able to download and run this code and have it work unless you have the same setup sadly, instead the code is there to learn the tools for making your own.
 
 The arduino webserver code is also included in the `arduino_webserver` folder.
 
