@@ -6,17 +6,22 @@ package com.elucidation.hellohome;
 
 import java.util.ArrayList;
 
+import com.google.android.glass.app.Card;
+
+import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.speech.RecognizerIntent;
 import android.util.Log; 
+import android.widget.TextView;
 
 public class HelloHome extends Activity {
 
 	private static final String LOG_TAG = "SAM_DEBUG";
 	
+	private TextView mTextView; // Member variable for text view in layout
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +51,14 @@ public class HelloHome extends Activity {
 		// Hack to '[example, string, message]' to 'example string message'
 		String voiceMessage = voiceResults.toString().replace(", ", " ").replaceAll("[\\[\\]]", "");
 		
+		
 		Log.v(LOG_TAG, String.format("Received Voice Command: %s", voiceMessage));
 		
-		
+		// Create a card showing what you said
+		Card card = new Card(this);
+		card.setText(voiceMessage);
+		card.setFootnote("Said you.");
+		setContentView(card.toView());
 		
 		Log.v(LOG_TAG, "Finishing.");
 	}
